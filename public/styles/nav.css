@@ -1,0 +1,39 @@
+nav {
+  background-color: #4056a1;
+  color: #ffffff;
+  font-family: sans-serif;
+  padding: 1.5em;
+  height: 100px;
+  width: 100%;
+  border-width: 0;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: Bungee, sans-serif;
+
+
+}
+.right-container{
+  font-size: 18px;
+ align-items: flex-end;
+}
+
+.nav-right {
+  font-family: "Source Sans Pro", sans-serif;
+  
+}
+
+.arrow {
+  display:flex;
+  padding: 5px;
+    justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+  
+  font-size: 14px;
+  color: red;
+  
+}
