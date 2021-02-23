@@ -1,0 +1,31 @@
+#tweet-container{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  border: 2px solid #545149;
+}
+
+article header{
+display: flex;
+padding: 10px;
+justify-content: space-between;
+
+}
+
+.tweet-main{
+
+  display: flex;
+  padding: 10px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #545149;
+}
+
+article footer{
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}

@@ -2,6 +2,7 @@
   display: flex;
   margin: 0 auto;
   flex-direction: column;
+  padding: 20px;
 }
 h2 {
   display: flex;
@@ -11,7 +12,7 @@ h2 {
   padding: 10px;
 }
 
-input {
+textarea {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +23,8 @@ input {
   background: transparent;
   border-bottom: 2px solid #545149;
   padding: 10px;
+  overflow: hidden; 
+  resize: none;
 }
 
 .button {
