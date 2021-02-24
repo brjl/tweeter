@@ -5,6 +5,8 @@ nav {
   padding: 1.5em;
   height: 100px;
   width: 100%;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
   border-width: 0;
 }
 .container {
@@ -14,26 +16,22 @@ nav {
 }
 .logo {
   font-family: Bungee, sans-serif;
-
-
 }
-.right-container{
+.right-container {
   font-size: 18px;
- align-items: flex-end;
+  align-items: flex-end;
 }
 
 .nav-right {
   font-family: "Source Sans Pro", sans-serif;
-  
 }
 
 .arrow {
-  display:flex;
+  display: flex;
   padding: 5px;
-    justify-content: center;
+  justify-content: center;
   font-family: "Source Sans Pro", sans-serif;
-  
+
   font-size: 14px;
   color: red;
-  
 }

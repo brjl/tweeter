@@ -4,7 +4,6 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
-
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
@@ -21,7 +20,6 @@
   <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -30,23 +28,15 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-
     <div class="container">
       <span class="logo">tweeter</span>
-
       <div class="right-container">
         <span><b>Write</b> a new tweet</span>
-
         <div class="arrow">&#9660;</div>
       </div>
-
-
-
     </div>
   </nav>
-
   <header class="main-header">
-
     <div>
       <img src="/images/profile-hex.png">
     </div>
@@ -56,12 +46,10 @@
     </div>
     </div>
   </header>
-
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-
       <form class="form-inline" action="/tweets" method="POST">
         <!--<label for="tweet-text">What are you humming about?</label>-->
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
@@ -69,14 +57,16 @@
           <button type="submit" class="button">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
-
       </form>
     </section>
     <section id="tweet-container">
-      <article class="tweet">
+      <article>
         <header>
-          <img src="https://i.imgur.com/73hZDYK.png">
-          <p>@Username</p>
+          <div class="left-side">
+            <img src="https://i.imgur.com/73hZDYK.png">
+            <p>FirstName</p>
+          </div>
+          <p class="user-name">@Username</p>
         </header>
         <div class="tweet-main">
           <p>Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt i mechad dee Schwoanshaxn
@@ -84,11 +74,30 @@
             Ramasuri Edlweiss. Wia vo de Weiznglasl wos, imma hogg di hera Guglhupf! Schorsch Spotzerl schnacksln
             Weiznglasl vui gschmeidig a ganze auf der Oim, da gibt’s koa Sünd, etza!</p>
         </div>
-        <footer><p>January 1</p><p>icons go here</p></footer>
+        <footer>
+          <p>January 1</p>
+          <p>icons go here</p>
+        </footer>
       </article>
-    </section>
-
-
+      <article>
+        <header>
+          <div class="left-side">
+            <img src="https://i.imgur.com/73hZDYK.png">
+            <p>FirstName</p>
+          </div>
+          <p class="user-name">@Username</p>
+        </header>
+        <div class="tweet-main">
+          <p>Bavaria ipsum dolor sit amet Radler Schneid vui huift vui ognudelt i mechad dee Schwoanshaxn
+            Zwedschgndadschi a bissal wos gehd ollaweil. Measi a ganze es i mog di fei aasgem, Blosmusi. Schmankal zwoa
+            Ramasuri Edlweiss. Wia vo de Weiznglasl wos, imma hogg di hera Guglhupf! Schorsch Spotzerl schnacksln
+            Weiznglasl vui gschmeidig a ganze auf der Oim, da gibt’s koa Sünd, etza!</p>
+        </div>
+        <footer>
+          <p>January 1</p>
+          <p>icons go here</p>
+        </footer>
+      </article>
   </main>
 </body>
 

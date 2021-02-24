@@ -23,7 +23,7 @@ textarea {
   background: transparent;
   border-bottom: 2px solid #545149;
   padding: 10px;
-  overflow: hidden; 
+  overflow: hidden;
   resize: none;
 }
 
@@ -37,17 +37,18 @@ textarea {
   display: inline-block;
   font-size: 14px;
   font-family: Bungee, sans-serif;
-  
 }
 
 .counter {
- 
   font-family: Bungee, sans-serif;
- 
+}
+
+.counter-red {
+  color: "red";
 }
 
 .below-tweet {
-display: flex;  
-justify-content: space-between;
-padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
