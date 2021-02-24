@@ -15,15 +15,13 @@ const onKeyUp = function (event) {
   button.prop("disabled", false);
 
   if (charactersLeft < 0) {
-    //output.css({ color: "red" });
-    output.addClass("counter-red"); //not working, but what I need to use
+    parent.find("output").addClass("counter-red");
     button.prop("disabled", true);
     button.fadeTo(0, 0.25);
   }
 
-  if (charactersLeft > 0) {
-    //output.css({ color: #545149 });
-    output.removeClass("counter-red"); //not working, but what I need to use
+  if (charactersLeft >= 0) {
+    output.removeClass("counter-red");
     button.fadeTo(0, 1);
   }
 };
