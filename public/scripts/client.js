@@ -1,5 +1,9 @@
 $(document).ready(function () {
+  /* LOAD DB TWEETS */
   loadTweets();
+
+  /* FORM SUBMIT */
+
   $(".form-inline").submit(function (event) {
     event.preventDefault();
     const data = $(this).serialize();
@@ -7,6 +11,7 @@ $(document).ready(function () {
     const parent = $(this).parent();
     const errorLong = parent.find("#error-long");
     const errorShort = parent.find("#error-short");
+
     if (!textInput) {
       $(errorShort).show(400);
     }
@@ -16,17 +21,19 @@ $(document).ready(function () {
     if (textInput && textInput.length <= 140) {
       $(errorLong).hide(400);
       $(errorShort).hide(400);
+
       $.ajax({
         url: "/tweets",
         method: "POST",
         data,
       }).then((result) => {
-        loadTweets([0]); // is currently re-loading all tweets
-        //$("#tweet-container").prepend(renderTweets(result));
+        loadTweets();
       });
     }
   });
 });
+
+/* TWEET TEMPLATE */
 
 const createTweetElement = function (tweet) {
   const $tweet = $(`<article>
@@ -48,11 +55,16 @@ const createTweetElement = function (tweet) {
   return $tweet;
 };
 
+/* LOOPS THROUGH AJAX TWEETS & ADDS TO TEMPLATE */
+
 const renderTweets = function (tweets) {
+  $("#tweet-container").empty();
   for (const tweet of tweets) {
     $("#tweet-container").prepend(createTweetElement(tweet));
   }
 };
+
+/* AJAX REQ FOR TWEETS */
 
 const loadTweets = function () {
   $.ajax("/tweets", { method: "GET" }).then(function (tweets) {
@@ -60,13 +72,10 @@ const loadTweets = function () {
   });
 };
 
+/* XSS ESCAPE */
+
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
-
-// const errorMessage = function (){
-// //maybe
-
-// }
