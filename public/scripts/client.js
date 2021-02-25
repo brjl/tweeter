@@ -1,33 +1,26 @@
 $(document).ready(function () {
- 
   loadTweets();
-  $(".form-inline").click(function (event) {
+  $(".form-inline").submit(function (event) {
     event.preventDefault();
-
+    const button = $(this).find("button"); //useless I think
+    console.log(button)
     const data = $(this).serialize();
     const textInput = $("#tweet-text").val();
-    console.log(textInput);
-
     if (!textInput) {
       return alert("Form cannot be blank!");
-    }
-    else if (textInput.length > 140) {
+    } else if (textInput.length > 140) {
       return alert("Too many characters!");
+    } else {
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data,
+      }).then((result) => {
+        loadTweets();
+        $("#tweet-container").prepend(renderTweets(result));
+      });
     }
-    else{
-
-    $.ajax({
-      url: "/tweets",
-      method: "POST",
-      data,
-    }).then((result) => {
-      loadTweets();
-      $("#tweet-container").prepend(renderTweets(result));
- 
-    });
-  }
   });
-
 });
 
 const createTweetElement = function (tweet) {
