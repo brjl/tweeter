@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   /* LOAD DB TWEETS */
   loadTweets();
@@ -39,16 +40,16 @@ const createTweetElement = function (tweet) {
   const $tweet = $(`<article>
         <header>
           <div class="left-side">
-            <img src="${escape(tweet.user.avatars)}">
-            <p>${escape(tweet.user.name)}</p>
+            <img src="${tweet.user.avatars}">
+            <p>${tweet.user.name}</p>
           </div>
-            <p class="user-name">${escape(tweet.user.handle)}</p>
+            <p class="user-name">${tweet.user.handle}</p>
         </header>
         <div class="tweet-main">
             <p>${escape(tweet.content.text)}</p>
         </div>
         <footer>
-            <p>${escape(tweet.created_at)}</p>
+            <p>${moment(tweet.created_at).fromNow()}</p>
             <p class="icons">&#x2691; &#8634; &#x2665;</p>
         </footer>
     </article>`);
