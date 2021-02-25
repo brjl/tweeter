@@ -50,10 +50,8 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <div class="error">&#9762; Tweet cannot be empty! Say something interesting! &#9762;</div>
-      <div class="error">&#9762; Tweet is too long! It must be 140 characters or less. &#9762;</div>
+      <div class="error"></div>
       <form class="form-inline" action="/tweets" method="POST">
-        <!--<label for="tweet-text">What are you humming about?</label>-->
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="below-tweet">
           <button type="submit" class="button">Tweet</button>

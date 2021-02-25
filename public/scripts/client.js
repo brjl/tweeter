@@ -4,12 +4,18 @@ $(document).ready(function () {
     event.preventDefault();
     const button = $(this).find("button"); //useless I think
     //console.log(button);
+    const parent = $(this).parent();
+  const error = parent.find("error");
+  console.log(error)
     const data = $(this).serialize();
     const textInput = $("#tweet-text").val();
     if (!textInput) {
-      return alert("Form cannot be blank!");
+    error.append(`&#9762; Tweet cannot be empty! Say something interesting! &#9762;`);
+      //return alert("Form cannot be blank!");
     } else if (textInput.length > 140) {
-      return alert("Too many characters!");
+
+      error.append(`&#9762; Tweet is too long! It must be 140 characters or less. &#9762;`);
+      //return alert("Too many characters!");
     } else {
       $.ajax({
         url: "/tweets",
@@ -37,7 +43,7 @@ const createTweetElement = function (tweet) {
         </div>
         <footer>
             <p>${escape(tweet.created_at)}</p>
-            <p>icons go here</p>
+            <p class="icons">&#x2691; &#8634; &#x2665;</p>
         </footer>
     </article>`);
   return $tweet;
@@ -60,3 +66,9 @@ const escape = function (str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
+
+// const errorMessage = function (){
+// //maybe
+
+
+// }
