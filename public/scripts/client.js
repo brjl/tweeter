@@ -2,21 +2,20 @@ $(document).ready(function () {
   loadTweets();
   $(".form-inline").submit(function (event) {
     event.preventDefault();
-    const button = $(this).find("button"); //useless I think
-    //console.log(button);
-    const parent = $(this).parent();
-  const error = parent.find("error");
-  console.log(error)
     const data = $(this).serialize();
     const textInput = $("#tweet-text").val();
+    const parent = $(this).parent();
+    const errorLong = parent.find("#error-long");
+    const errorShort = parent.find("#error-short");
     if (!textInput) {
-    error.append(`&#9762; Tweet cannot be empty! Say something interesting! &#9762;`);
-      //return alert("Form cannot be blank!");
-    } else if (textInput.length > 140) {
-
-      error.append(`&#9762; Tweet is too long! It must be 140 characters or less. &#9762;`);
-      //return alert("Too many characters!");
-    } else {
+      $(errorShort).show(400);
+    }
+    if (textInput.length > 140) {
+      $(errorLong).show(400);
+    }
+    if (textInput && textInput.length <= 140) {
+      $(errorLong).hide(400);
+      $(errorShort).hide(400);
       $.ajax({
         url: "/tweets",
         method: "POST",
@@ -69,6 +68,5 @@ const escape = function (str) {
 
 // const errorMessage = function (){
 // //maybe
-
 
 // }

@@ -53,7 +53,7 @@ textarea {
   padding: 10px;
 }
 
-.error {
+#error-long, #error-short {
   text-align: center;
   margin: 10px 0px;
   padding: 12px;
