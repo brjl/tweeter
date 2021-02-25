@@ -8,20 +8,20 @@ const onKeyUp = function (event) {
   const button = parent.find("button");
   let charactersTyped = $(this).val().length;
   let charactersLeft = 140 - charactersTyped;
-  console.log(button);
+  //console.log(button);
 
   //$(".counter").html(charactersLeft) //direct way to access
   output.html(charactersLeft);
-  button.prop("disabled", false);
+  //button.prop("disabled", false);
 
   if (charactersLeft < 0) {
     parent.find("output").addClass("counter-red");
-    button.prop("disabled", true);
-    button.fadeTo(0, 0.25);
+    //button.prop("disabled", true);
+    //button.fadeTo(0, 0.25);
   }
 
   if (charactersLeft >= 0) {
     output.removeClass("counter-red");
-    button.fadeTo(0, 1);
+    //button.fadeTo(0, 1);
   }
 };

@@ -52,3 +52,16 @@ textarea {
   justify-content: space-between;
   padding: 10px;
 }
+
+.error {
+  text-align: center;
+  margin: 10px 0px;
+  padding: 12px;
+  color: #D8000C;
+  background-color: #FFD2D2;
+  display: none;
+}
+
+
+
+
