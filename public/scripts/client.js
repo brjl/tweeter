@@ -1,6 +1,6 @@
 $(document).ready(function () {
+ 
   loadTweets();
-
   $(".form-inline").click(function (event) {
     event.preventDefault();
 
@@ -8,7 +8,7 @@ $(document).ready(function () {
     const textInput = $("#tweet-text").val();
     console.log(textInput);
 
-    if (textInput === '') {
+    if (!textInput) {
       return alert("Form cannot be blank!");
     }
     else if (textInput.length > 140) {
@@ -21,7 +21,9 @@ $(document).ready(function () {
       method: "POST",
       data,
     }).then((result) => {
+      loadTweets();
       $("#tweet-container").prepend(renderTweets(result));
+ 
     });
   }
   });
