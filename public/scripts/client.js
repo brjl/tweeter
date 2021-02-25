@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(".form-inline").submit(function (event) {
     event.preventDefault();
     const button = $(this).find("button"); //useless I think
-    console.log(button)
+    //console.log(button);
     const data = $(this).serialize();
     const textInput = $("#tweet-text").val();
     if (!textInput) {
@@ -16,8 +16,8 @@ $(document).ready(function () {
         method: "POST",
         data,
       }).then((result) => {
-        loadTweets();
-        $("#tweet-container").prepend(renderTweets(result));
+        loadTweets([0]); // is currently re-loading all tweets
+        //$("#tweet-container").prepend(renderTweets(result));
       });
     }
   });
@@ -27,16 +27,16 @@ const createTweetElement = function (tweet) {
   const $tweet = $(`<article>
         <header>
           <div class="left-side">
-            <img src="${tweet.user.avatars}">
-            <p>${tweet.user.name}</p>
+            <img src="${escape(tweet.user.avatars)}">
+            <p>${escape(tweet.user.name)}</p>
           </div>
-            <p class="user-name">${tweet.user.handle}</p>
+            <p class="user-name">${escape(tweet.user.handle)}</p>
         </header>
         <div class="tweet-main">
-            <p>${tweet.content.text}</p>
+            <p>${escape(tweet.content.text)}</p>
         </div>
         <footer>
-            <p>${tweet.created_at}</p>
+            <p>${escape(tweet.created_at)}</p>
             <p>icons go here</p>
         </footer>
     </article>`);
@@ -49,31 +49,14 @@ const renderTweets = function (tweets) {
   }
 };
 
-// $(".form-inline").click(function (event) {
-//   event.preventDefault();
-
-//   const data = $(".form-inline").serialize();
-//   // const textInput = $("#tweet-text").val();
-//   // console.log(textInput);
-//   // if (textInput === null) {
-//   //   alert("Form cannot be blank!");
-//   // }
-//   // if (textInput.length > 140) {
-//   //   alert("Too many characters!");
-//   // }
-
-//   $.ajax({
-//     url: "/tweets",
-//     method: "POST",
-//     data,
-//   }).then((result) => {
-//     $("#tweet-container").prepend(renderTweets(result));
-//   });
-//   console.log("Hi");
-// });
-
 const loadTweets = function () {
   $.ajax("/tweets", { method: "GET" }).then(function (tweets) {
     renderTweets(tweets);
   });
+};
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
