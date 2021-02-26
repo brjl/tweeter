@@ -6,13 +6,15 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 .parent {
   display: flex;
   flex-direction: row;
- justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 /*
  * Global layout stuff
@@ -23,12 +25,11 @@ body {
   background-color: #f4f1ec;
   font-size: 1.5rem;
   font-family: "Source Sans Pro", sans-serif;
-
 }
 
- main {
-   display: flex;
-   margin: 0 auto;
+main {
+  display: flex;
+  margin: 0 auto;
   color: #545149;
   background-color: #f4f1ec;
   width: 90%;
@@ -36,11 +37,15 @@ body {
   flex-direction: column;
 
   font-family: "Source Sans Pro", sans-serif;
- }
+}
 
- @media (min-width: 1024px) {
+@media (min-width: 1024px) {
   main {
     display: flex;
     flex-direction: row;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
   }
 }
