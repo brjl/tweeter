@@ -2,7 +2,12 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+Created with starter code from Lighthouse Labs, Tweeter uses HTML, CSS, JS, jQuery and AJAX along with Express to simulate a Twitter-like SPA. Tweeter is responsive and should work on tablets and desktop. 
+
+## Final Product
+
+!["screenshot of desktop tweets"](https://github.com/brjl/tweeter/blob/master/docs/desktop-tweets.png)
+!["screenshot tablet tweets with error"](https://github.com/brjl/tweeter/blob/master/docs/tablet-tweets.png)
 
 ## Getting Started
 
