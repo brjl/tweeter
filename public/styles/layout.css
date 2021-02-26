@@ -40,9 +40,13 @@ main {
 }
 
 @media (min-width: 1024px) {
+  body{
+
+  display: flex;
+  }
   main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   section {
     display: flex;
