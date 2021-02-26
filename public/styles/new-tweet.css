@@ -19,7 +19,7 @@ textarea {
   font-family: "Source Sans Pro", sans-serif;
   border: 0;
   outline: 0;
-  width: 35vw;
+  width: 450px;
   background: transparent;
   border-bottom: 2px solid #545149;
   padding: 10px;
@@ -67,18 +67,22 @@ textarea {
     display: flex;
     margin: 0 auto;
     flex-direction: column;
-    padding: 10px;
-    margin-top: 6em;
     justify-content: center;
+    padding: 10px;
+    margin-top: 6.5em;
+    justify-content: center;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
 
   }
   textarea {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-family: "Source Sans Pro", sans-serif;
     border: 0;
     outline: 0;
-    width: 40vw;
+    width: 50vw;
     background: transparent;
     border-bottom: 2px solid #545149;
     padding: 10px;
