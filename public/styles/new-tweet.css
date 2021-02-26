@@ -19,7 +19,7 @@ textarea {
   font-family: "Source Sans Pro", sans-serif;
   border: 0;
   outline: 0;
-  width: 450px;
+  width: 35vw;
   background: transparent;
   border-bottom: 2px solid #545149;
   padding: 10px;
@@ -35,7 +35,7 @@ textarea {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Bungee, sans-serif;
 }
 
@@ -61,7 +61,5 @@ textarea {
   background-color: #FFD2D2;
   display: none;
 }
-
-
 
 

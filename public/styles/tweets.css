@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-  width: 700px;
+  width: 50vw;
 }
 
 article {
@@ -19,6 +19,16 @@ article:hover {
 article:hover .user-name {
   display: block;
   color: #072642;
+}
+
+article:hover .icons {
+  display: block;
+  color: #072642;
+}
+
+article:active .icons {
+  display: block;
+  color: red
 }
 
 .user-name {
@@ -60,6 +70,13 @@ article footer {
 }
 
 .icons {
-  color: #072642
+  display: none;
+}
+
+
+@media (min-width: 1024px) {
+ 
+
+
 
 }

@@ -3,12 +3,25 @@ nav {
   color: #ffffff;
   font-family: sans-serif;
   padding: 1.5em;
-  height: 100px;
+  height: 15%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-width: 0;
+}
+
+nav {
+  background-color: #072642;
+  color: #ffffff;
+  font-family: sans-serif;
+  padding: 1.5em;
+  height: 15%;
   width: 100%;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   border-width: 0;
 }
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -18,7 +31,7 @@ nav {
   font-family: Bungee, sans-serif;
 }
 .right-container {
-  font-size: 18px;
+  font-size: 1.125rem;
   align-items: flex-end;
 }
 
@@ -28,10 +41,9 @@ nav {
 
 .arrow {
   display: flex;
-  padding: 5px;
+  padding: .2rem;
   justify-content: center;
   font-family: "Source Sans Pro", sans-serif;
-
-  font-size: 14px;
+  font-size: 0.875rem;
   color: red;
 }
