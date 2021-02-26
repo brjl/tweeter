@@ -28,7 +28,7 @@ article:hover .icons {
 
 article:active .icons {
   display: block;
-  color: red
+  color: red;
 }
 
 .user-name {
@@ -73,12 +73,8 @@ article footer {
   display: none;
 }
 
-
 @media (min-width: 1024px) {
- 
   #tweet-container {
-  margin-right: 2em;
+    margin-right: 2em;
   }
-
-
 }

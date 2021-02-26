@@ -7,7 +7,6 @@ $(document).ready(function () {
 const onKeyUp = function (event) {
   const parent = $(this).parent();
   const output = parent.find("output");
-  const button = parent.find("button");
   let charactersTyped = $(this).val().length;
   let charactersLeft = 140 - charactersTyped;
 

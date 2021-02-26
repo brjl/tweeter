@@ -17,8 +17,8 @@ nav {
   padding: 1.5em;
   height: 15%;
   width: 100%;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
+  position: fixed;
+  top: 0; 
   border-width: 0;
 }
 
@@ -41,7 +41,7 @@ nav {
 
 .arrow {
   display: flex;
-  padding: .2rem;
+  padding: 0.2rem;
   justify-content: center;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 0.875rem;

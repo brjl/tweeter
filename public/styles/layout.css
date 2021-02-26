@@ -29,6 +29,7 @@ body {
 
 main {
   display: flex;
+  justify-content: center;
   margin: 0 auto;
   color: #545149;
   background-color: #f4f1ec;
@@ -40,9 +41,8 @@ main {
 }
 
 @media (min-width: 1024px) {
-  body{
-
-  display: flex;
+  body {
+    display: flex;
   }
   main {
     display: flex;
