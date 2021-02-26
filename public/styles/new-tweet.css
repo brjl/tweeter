@@ -65,11 +65,11 @@ textarea {
 @media (min-width: 1024px) {
   textarea {
     display: flex;
- flex-direction: column;
+    flex-direction: column;
     font-family: "Source Sans Pro", sans-serif;
     border: 0;
     outline: 0;
-    width: 35vw;
+    width: 40vw;
     background: transparent;
     border-bottom: 2px solid #545149;
     padding: 10px;

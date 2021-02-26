@@ -14,14 +14,16 @@ h2 {
   margin: 0;
 }
 
+
+
 @media (min-width: 1024px) {
   
   .main-header {
     display: flex;
     margin-right: 1em;
-    margin-left: 3em;
+    margin-left: 4em;
     margin-top: 6em;
-    height: 300px;
+    height: 400px;
     padding: 2%;
     width: 300px;
     flex-direction: column;

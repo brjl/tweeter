@@ -29,6 +29,7 @@ $(document).ready(function () {
         data,
       }).then((result) => {
         loadTweets();
+        $("#tweet-text").val('');
       });
     }
   });
