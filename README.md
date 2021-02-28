@@ -6,8 +6,8 @@ Created with starter code from Lighthouse Labs, Tweeter uses HTML, CSS, JS, jQue
 
 ## Final Product
 
-!["screenshot of desktop tweets"](https://github.com/brjl/tweeter/blob/master/docs/desktop-tweets.png)
-!["screenshot tablet tweets with error"](https://github.com/brjl/tweeter/blob/master/docs/tablet-tweets.png)
+!["screenshot of desktop tweets"](https://github.com/brjl/tweeter/blob/master/docs/desktop-tweet.png)
+!["screenshot tablet tweets with error"](https://github.com/brjl/tweeter/blob/master/docs/tablet-tweet.png)
 
 ## Getting Started
 
