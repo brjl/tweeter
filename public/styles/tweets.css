@@ -72,9 +72,3 @@ article footer {
 .icons {
   display: none;
 }
-
-@media (min-width: 1024px) {
-  #tweet-container {
-    margin-right: 2em;
-  }
-}

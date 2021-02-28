@@ -29,7 +29,7 @@ body {
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   margin: 0 auto;
   color: #545149;
   background-color: #f4f1ec;
@@ -38,6 +38,12 @@ main {
   flex-direction: column;
 
   font-family: "Source Sans Pro", sans-serif;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+
 }
 
 @media (min-width: 1024px) {
