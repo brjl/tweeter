@@ -43,16 +43,11 @@ main {
 .body-container {
   display: flex;
   flex-direction: column;
-
 }
 
 @media (min-width: 1024px) {
   body {
     display: flex;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
   }
   section {
     display: flex;

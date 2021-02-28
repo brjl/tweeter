@@ -12,10 +12,10 @@ textarea {
   font-family: "Source Sans Pro", sans-serif;
   border: 0;
   outline: 0;
-  width: 450px;
+  width: 45vw;
   background: transparent;
   border-bottom: 2px solid #545149;
-  padding: 10px;
+  padding: 15px;
   overflow: hidden;
   resize: none;
 }
@@ -49,8 +49,9 @@ textarea {
 #error-long,
 #error-short {
   text-align: center;
-  margin: 10px 0px;
-  padding: 12px;
+  margin: 0 auto;
+  padding: 8px;
+  width: 45vw;
   color: #d8000c;
   background-color: #ffd2d2;
   display: none;
